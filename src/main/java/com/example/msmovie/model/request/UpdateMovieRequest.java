@@ -1,4 +1,4 @@
-package com.example.model.request;
+package com.example.msmovie.model.request;
 
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;

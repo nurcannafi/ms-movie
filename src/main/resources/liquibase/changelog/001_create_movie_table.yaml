@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001_create_movie_table
+      author: Nurcan Nafizade
+      changes:
+         - createTable:
+            tableName: movies
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: director
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: release_year
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: genre
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: imdb_rating
+                  type: numeric(3,1)
+                  constraints:
+                    nullable: false

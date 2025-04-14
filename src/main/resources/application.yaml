@@ -1,1 +1,18 @@
-spring.application.name=ms-movie
+spring:
+  liquibase:
+    change-log: classpath:/liquibase/changelog-master.yaml
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/movie
+    username: postgres
+    password: 4277
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+logging:
+  level:
+    root: WARN
+    org.hibernate: WARN
+

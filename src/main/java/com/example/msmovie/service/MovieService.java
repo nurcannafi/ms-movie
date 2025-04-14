@@ -1,14 +1,14 @@
-package com.example.service;
+package com.example.msmovie.service;
 
-import com.example.domain.entity.MovieEntity;
-import com.example.domain.repository.MovieRepository;
-import com.example.domain.repository.MovieSpecification;
-import com.example.exception.MovieNotFoundException;
+import com.example.msmovie.domain.entity.MovieEntity;
+import com.example.msmovie.domain.repository.MovieRepository;
+import com.example.msmovie.domain.repository.MovieSpecification;
+import com.example.msmovie.exception.MovieNotFoundException;
+import com.example.msmovie.mapper.MovieMapper;
+import com.example.msmovie.model.dto.MovieDto;
+import com.example.msmovie.model.request.CreateMovieRequest;
+import com.example.msmovie.model.request.UpdateMovieRequest;
 import lombok.RequiredArgsConstructor;
-import com.example.mapper.MovieMapper;
-import com.example.model.dto.MovieDto;
-import com.example.model.request.CreateMovieRequest;
-import com.example.model.request.UpdateMovieRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -74,5 +74,4 @@ public class MovieService {
         return movieRepository.findById(id)
                 .orElseThrow(() -> new MovieNotFoundException("Movie not found"));
     }
-
 }

@@ -1,6 +1,6 @@
-package com.example.domain.repository;
+package com.example.msmovie.domain.repository;
 
-import com.example.domain.entity.MovieEntity;
+import com.example.msmovie.domain.entity.MovieEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

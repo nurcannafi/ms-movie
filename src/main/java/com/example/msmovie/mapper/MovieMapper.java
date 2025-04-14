@@ -1,8 +1,8 @@
-package com.example.mapper;
+package com.example.msmovie.mapper;
 
-import com.example.domain.entity.MovieEntity;
-import com.example.model.dto.MovieDto;
-import com.example.model.request.CreateMovieRequest;
+import com.example.msmovie.domain.entity.MovieEntity;
+import com.example.msmovie.model.dto.MovieDto;
+import com.example.msmovie.model.request.CreateMovieRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValueCheckStrategy;
@@ -19,6 +19,5 @@ public interface MovieMapper {
     MovieDto toDto(MovieEntity movieEntity);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "imdbRating", ignore = true)
     MovieEntity toEntity(CreateMovieRequest createMovieRequest);
 }

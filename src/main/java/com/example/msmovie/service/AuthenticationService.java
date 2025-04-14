@@ -4,7 +4,7 @@ import com.example.msmovie.model.dto.AuthenticationResponse;
 import com.example.msmovie.model.request.SignInRequest;
 import com.example.msmovie.model.request.SignUpRequest;
 
-public interface SignInService {
+public interface AuthenticationService {
 
     AuthenticationResponse signUp(SignUpRequest request);
 

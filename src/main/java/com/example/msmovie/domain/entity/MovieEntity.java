@@ -1,4 +1,4 @@
-package com.example.domain.entity;
+package com.example.msmovie.domain.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

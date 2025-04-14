@@ -1,9 +1,11 @@
-package com.example.controller;
+package com.example.msmovie.controller;
 
+import com.example.msmovie.model.dto.MovieDto;
+import com.example.msmovie.model.request.CreateMovieRequest;
+import com.example.msmovie.model.request.UpdateMovieRequest;
+import com.example.msmovie.service.MovieService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import com.example.model.dto.MovieDto;
-import com.example.model.request.CreateMovieRequest;
-import com.example.model.request.UpdateMovieRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.service.MovieService;
 
 import java.util.List;
 
@@ -46,7 +47,7 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<MovieDto> createMovie(@RequestBody CreateMovieRequest movieRequest) {
+    public ResponseEntity<MovieDto> createMovie(@RequestBody @Valid CreateMovieRequest movieRequest) {
         return ResponseEntity.ok(movieService.createMovie(movieRequest));
     }
 

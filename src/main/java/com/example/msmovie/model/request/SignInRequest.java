@@ -1,10 +1,19 @@
 package com.example.msmovie.model.request;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class AuthenticationRequest {
+@NoArgsConstructor
+@AllArgsConstructor
+public class SignInRequest {
 
+    @NotBlank
     private String username;
+
+    @Pattern(regexp = "\\d{4}")
     private String password;
 }
